@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pedrotennis.com/sitemap.xml
