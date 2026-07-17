@@ -1,0 +1,7 @@
+AJUSTE RESPONSIVE PARA CELULAR
+
+Se corrigieron desbordamientos horizontales, encabezado móvil, títulos, botones,
+reproductores de YouTube, galerías, tarjetas, comunidad, pie de página y botón flotante.
+También se corrigió la redacción del primer testimonio.
+
+Sube todos los archivos de esta carpeta a la raíz del repositorio y confirma el commit en main.
