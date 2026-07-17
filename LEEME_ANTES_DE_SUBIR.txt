@@ -1,21 +1,16 @@
-PEDRO PALACIOS ACADEMIA DE TENIS - LISTO PARA SUBIR
+PEDRO TENNIS - ZIP LISTO PARA PRODUCCIÓN
 
-Mejoras anexadas:
-1. Se agregó botón y enlace al canal de YouTube: https://www.youtube.com/@pedropalaciosjaime
-2. Se agregó YouTube en redes sociales del encabezado y contacto.
-3. Se corrigieron horarios: 6:00 am - 1:00 pm y 1:00 pm - 4:00 pm.
-4. Se actualizó copyright a 2026.
-5. Se agregaron etiquetas SEO social: canonical, Open Graph y Twitter Card.
-6. Se agregaron datos estructurados Schema.org para SEO local.
-7. Se agregó código base de Google Analytics 4.
+PASOS PARA SUBIR:
+1. Descomprime este ZIP.
+2. Sube el contenido de la carpeta pedrotennis al directorio público de tu hosting o Cloudflare Pages.
+3. Verifica que index.html quede en la raíz del sitio.
+4. Abre https://www.pedrotennis.com y revisa que cargue correctamente.
+5. En Google Analytics, revisa Informes > Tiempo real para confirmar visitas.
+6. En Google Search Console, envía este sitemap: https://pedrotennis.com/sitemap.xml
 
-IMPORTANTE SOBRE ANALYTICS:
-En index.html busca G-XXXXXXXXXX y reemplázalo por tu ID real de Google Analytics 4.
-Ejemplo: G-ABC123XYZ9
-
-Dominio configurado en SEO y sitemap:
-https://pedrotennis.com/
-Si tu dominio final será otro, reemplaza pedrotennis.com en index.html, sitemap.xml y robots.txt.
-
-Formulario:
-El formulario abre WhatsApp con el mensaje del prospecto. No guarda leads en servidor.
+INCLUIDO:
+- Google Analytics: G-WFM4B67M7G.
+- SEO para Satélite, Naucalpan y Atizapán.
+- Página Comunidad / Foro.
+- Formulario de contacto a WhatsApp.
+- robots.txt y sitemap.xml.

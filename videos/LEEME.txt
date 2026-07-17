@@ -1,0 +1,6 @@
+Coloca aquí tus videos con estos nombres:
+clase1.mp4
+clase2.mp4
+clase3.mp4
+
+Puedes cambiar los nombres en index.html si deseas usar otros archivos.

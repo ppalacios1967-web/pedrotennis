@@ -1,0 +1,4 @@
+CAMBIOS REALIZADOS
+- Se agregaron cuatro espacios visibles para videos en la sección "Clases infantiles".
+- Cada espacio enlaza al canal oficial de YouTube disponible en el proyecto.
+- No se encontraron enlaces individuales de videos dentro de los archivos recibidos.

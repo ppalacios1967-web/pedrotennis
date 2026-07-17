@@ -35,3 +35,52 @@ if(form){
     setTimeout(()=>{location.href='https://wa.me/525521047277?text='+text;},500);
   });
 }
+
+
+// Foro Pedro Tennis: publicaciones locales + envío por WhatsApp
+(function(){
+  const forumForm=document.getElementById('forumForm');
+  if(!forumForm) return;
+  const topics=document.getElementById('forumTopics');
+  const status=document.getElementById('forumStatus');
+  const waBtn=document.getElementById('sendForumWhatsApp');
+  const storeKey='pedroTennisForumPosts';
+  function escapeHtml(str){return String(str).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+  function readPosts(){try{return JSON.parse(localStorage.getItem(storeKey)||'[]')}catch(e){return []}}
+  function savePosts(posts){localStorage.setItem(storeKey,JSON.stringify(posts.slice(0,30)));}
+  function renderPost(post){
+    const card=document.createElement('article');
+    card.className='topic-card user-topic';
+    card.innerHTML=`<span>${escapeHtml(post.categoria)}</span><h3>${escapeHtml(post.titulo)}</h3><p>${escapeHtml(post.mensaje)}</p><small>Publicado por ${escapeHtml(post.nombre)} · ${escapeHtml(post.fecha)}</small>`;
+    topics.prepend(card);
+  }
+  readPosts().reverse().forEach(renderPost);
+  function formData(){
+    return {
+      nombre:forumForm.nombre.value.trim(),
+      categoria:forumForm.categoria.value,
+      titulo:forumForm.titulo.value.trim(),
+      mensaje:forumForm.mensaje.value.trim(),
+      fecha:new Date().toLocaleDateString('es-MX',{year:'numeric',month:'short',day:'numeric'})
+    };
+  }
+  forumForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    const post=formData();
+    if(!post.nombre||!post.titulo||!post.mensaje){return;}
+    const posts=readPosts();
+    posts.unshift(post);savePosts(posts);renderPost(post);forumForm.reset();
+    status.textContent='Tu publicación quedó guardada en este navegador. Para que Pedro la confirme, envíala también por WhatsApp.';
+    status.className='form-status success';
+  });
+  waBtn.addEventListener('click',()=>{
+    const post=formData();
+    if(!post.nombre||!post.titulo||!post.mensaje){
+      status.textContent='Completa nombre, título y mensaje antes de enviar por WhatsApp.';
+      status.className='form-status error';
+      return;
+    }
+    const text=`Hola, quiero publicar en la Comunidad Pedro Tennis.%0A%0ANombre: ${encodeURIComponent(post.nombre)}%0ACategoría: ${encodeURIComponent(post.categoria)}%0ATítulo: ${encodeURIComponent(post.titulo)}%0AMensaje: ${encodeURIComponent(post.mensaje)}`;
+    window.open('https://wa.me/525521047277?text='+text,'_blank','noopener');
+  });
+})();
