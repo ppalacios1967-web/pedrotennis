@@ -5,3 +5,5 @@ reproductores de YouTube, galerías, tarjetas, comunidad, pie de página y botó
 También se corrigió la redacción del primer testimonio.
 
 Sube todos los archivos de esta carpeta a la raíz del repositorio y confirma el commit en main.
+
+- Ajuste adicional del encabezado y del bloque de zonas en celular.
