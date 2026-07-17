@@ -1,0 +1,15 @@
+VERSIÓN CORREGIDA PARA CLOUDFLARE WORKERS
+
+Cambios:
+- Tres reproductores YouTube incrustados dentro de Clases infantiles.
+- URLs estándar /embed/ compatibles con videos y Shorts.
+- referrerpolicy configurado para que YouTube reciba el origen del sitio.
+- playsinline activado para reproducir dentro de la página en móviles.
+- Archivo _headers con protecciones de seguridad compatibles con YouTube.
+- wrangler.jsonc configurado para el Worker cool-shape-662d.
+
+SUBIDA A GITHUB:
+Sube el CONTENIDO de esta carpeta a la raíz del repositorio pedrotennis y confirma el commit en main.
+Después verifica el despliegue automático en Cloudflare.
+
+Nota: si el propietario de un video desactiva la inserción en YouTube, ningún cambio de la web puede forzar su reproducción incrustada.

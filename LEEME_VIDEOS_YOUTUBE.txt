@@ -1,0 +1,11 @@
+VIDEOS DE YOUTUBE
+
+Los reproductores están configurados para reproducirse dentro de la sección “Clases infantiles”.
+
+IMPORTANTE: abre la página desde un servidor web (https://tu-dominio.com) y no directamente con doble clic como archivo file://. YouTube puede mostrar el error 153 cuando una página local no envía un origen o referencia válidos.
+
+Para probarla localmente, desde la carpeta del sitio puedes ejecutar:
+python -m http.server 8000
+
+Después abre en el navegador:
+http://localhost:8000
