@@ -1,4 +1,4 @@
-/landing-tenis.html
+/para-tus-hijos*
   Cache-Control: public, max-age=300
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
@@ -6,3 +6,18 @@
 
 /images/landing/*
   Cache-Control: public, max-age=31536000, immutable
+
+/para-tus-hijos*
+  Cache-Control: public, max-age=300
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/tenis-para-ti*
+  Cache-Control: public, max-age=300
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/clinicas-para-damas*
+  Cache-Control: public, max-age=300
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

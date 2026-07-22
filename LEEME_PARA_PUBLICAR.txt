@@ -1,0 +1,21 @@
+PAQUETE DE PRODUCCIÓN — 3 LANDINGS PARA FACEBOOK
+
+Sube a la raíz del repositorio:
+- para-tus-hijos.html
+- tenis-para-ti.html
+- clinicas-para-damas.html
+- _headers
+- _redirects
+- carpeta images/landing
+
+URLs:
+https://www.pedrotennis.com/para-tus-hijos
+https://www.pedrotennis.com/tenis-para-ti
+https://www.pedrotennis.com/clinicas-para-damas
+
+No reemplaza index.html ni modifica la página principal.
+
+Enlaces sugeridos para Facebook:
+https://www.pedrotennis.com/para-tus-hijos?utm_source=facebook&utm_medium=paid_social&utm_campaign=papas
+https://www.pedrotennis.com/tenis-para-ti?utm_source=facebook&utm_medium=paid_social&utm_campaign=adultos
+https://www.pedrotennis.com/clinicas-para-damas?utm_source=facebook&utm_medium=paid_social&utm_campaign=damas
