@@ -1,0 +1,64 @@
+{
+  "html_pages": 8,
+  "errors": [],
+  "before_mb": 13.18,
+  "after_mb": 2.47,
+  "images": {
+    "images/gallery5.jpg": {
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "bytes": 395258
+    },
+    "images/gallery4.jpg": {
+      "dimensions": [
+        900,
+        1600
+      ],
+      "bytes": 420973
+    },
+    "images/gallery1.jpg": {
+      "dimensions": [
+        1050,
+        1400
+      ],
+      "bytes": 227930
+    },
+    "images/gallery2.jpg": {
+      "dimensions": [
+        1400,
+        1050
+      ],
+      "bytes": 241216
+    },
+    "images/hero.jpg": {
+      "dimensions": [
+        864,
+        1536
+      ],
+      "bytes": 266108
+    },
+    "images/gallery7.jpg": {
+      "dimensions": [
+        1050,
+        1400
+      ],
+      "bytes": 263792
+    },
+    "images/logo.png": {
+      "dimensions": [
+        460,
+        460
+      ],
+      "bytes": 325963
+    },
+    "images/gallery3.jpg": {
+      "dimensions": [
+        1400,
+        1050
+      ],
+      "bytes": 319443
+    }
+  }
+}

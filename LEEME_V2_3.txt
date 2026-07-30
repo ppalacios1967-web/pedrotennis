@@ -1,0 +1,21 @@
+PEDRO TENNIS — VERSIÓN 2.3 OPTIMIZADA
+
+Cambios incluidos:
+- Imágenes comprimidas y redimensionadas sin cambiar sus nombres.
+- Dimensiones width y height añadidas a imágenes HTML.
+- Carga diferida y decodificación asíncrona en imágenes secundarias.
+- Precarga de la imagen principal.
+- Enlaces externos reforzados con noopener y noreferrer.
+- Títulos y descripciones SEO más compactos.
+- Pie de página actualizado con Polanco.
+- Sitemap actualizado al 30 de julio de 2026.
+
+Peso aproximado antes: 13.2 MB
+Peso aproximado después: 2.5 MB
+Reducción: 81%
+
+IMPORTANTE AL SUBIR:
+1. Sube el contenido de esta carpeta sobre tu rama v2-2-polanco o una nueva rama v2-3.
+2. No elimines archivos que ya existen en GitHub y no aparecen aquí.
+3. No reemplaces ni elimines el archivo _redirects existente. Esta versión no lo incluye.
+4. Revisa la vista previa antes de fusionar con main.
