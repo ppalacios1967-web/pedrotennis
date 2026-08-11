@@ -19,3 +19,13 @@ IMPORTANTE AL SUBIR:
 2. No elimines archivos que ya existen en GitHub y no aparecen aquí.
 3. No reemplaces ni elimines el archivo _redirects existente. Esta versión no lo incluye.
 4. Revisa la vista previa antes de fusionar con main.
+
+ACTUALIZACIÓN SEO — 11 DE AGOSTO DE 2026
+- pedrotennis.com se mantiene como dominio principal y canónico.
+- H1 de la portada reforzado con “Clases de tenis” y las zonas objetivo.
+- H1 de páginas locales reforzados con la búsqueda geográfica correspondiente.
+- H1 de programas de adultos y niños reforzados con intención de búsqueda.
+- Idioma de la portada normalizado a es-MX.
+- Sitemap actualizado al 11 de agosto de 2026.
+- No se añadieron canonical ni contenido duplicado para clasesdetenis.com o clasesdetenis.mx.
+- Las redirecciones de esos dominios deben configurarse en Cloudflare como 301.

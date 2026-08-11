@@ -1,0 +1,28 @@
+PEDRO TENNIS — CONFIGURACIÓN DE DOMINIOS EN CLOUDFLARE
+Fecha: 11 de agosto de 2026
+
+OBJETIVO SEO
+Mantener https://pedrotennis.com/ como dominio principal y canónico para conservar las señales de posicionamiento existentes.
+
+DOMINIOS NUEVOS
+- clasesdetenis.com
+- clasesdetenis.mx
+
+CONFIGURACIÓN RECOMENDADA
+Crear una redirección permanente HTTP 301 para cada dominio nuevo hacia:
+https://pedrotennis.com/
+
+También debe cubrir www:
+- www.clasesdetenis.com -> https://pedrotennis.com/
+- www.clasesdetenis.mx -> https://pedrotennis.com/
+
+IMPORTANTE
+1. No publicar copias del mismo sitio bajo los dominios nuevos.
+2. No cambiar los canonical del sitio: deben seguir apuntando a pedrotennis.com.
+3. No transferir ni mover el hosting actual solo por tener los dominios nuevos.
+4. En Cloudflare, usar Redirect Rules / Single Redirect con status code 301.
+5. Después de activar los redirects, comprobar en navegador que ambos dominios terminan en https://pedrotennis.com/.
+6. Mantener HTTPS activo para los dominios nuevos.
+
+USO COMERCIAL
+Puedes usar clasesdetenis.mx o clasesdetenis.com en publicidad, uniformes, tarjetas y campañas. El visitante terminará en Pedro Tennis y Google seguirá concentrando las señales SEO en un solo dominio.
