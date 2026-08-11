@@ -84,6 +84,64 @@ img,video,iframe,svg{max-width:100%}
   .pt-about img{width:64px;height:64px}
 }
 
+/* Logo sizing shared by every page and footer.
+   The source artwork is square (460 x 460), so both dimensions are kept
+   explicit to avoid layout shifts and distortion between templates. */
+:root{
+  --pt-logo-header-size:112px;
+  --pt-logo-footer-size:96px;
+}
+
+.brand,
+.pt-logo,
+.landing-brand{
+  display:flex;
+  width:var(--pt-logo-header-size);
+  height:var(--pt-logo-header-size);
+  flex:0 0 var(--pt-logo-header-size);
+  align-items:center;
+  justify-content:center;
+}
+
+.brand img,
+.pt-logo img,
+.landing-brand img{
+  display:block;
+  width:100%!important;
+  max-width:100%!important;
+  height:100%!important;
+  max-height:100%!important;
+  object-fit:contain;
+  object-position:center;
+}
+
+.pt-footer img{
+  display:block;
+  width:var(--pt-logo-footer-size)!important;
+  max-width:var(--pt-logo-footer-size)!important;
+  height:var(--pt-logo-footer-size)!important;
+  object-fit:contain;
+  object-position:center;
+}
+
+@media(max-width:760px){
+  :root{
+    --pt-logo-header-size:82px;
+    --pt-logo-footer-size:82px;
+  }
+
+  .pt-footer img{
+    margin-inline:auto;
+  }
+}
+
+@media(max-width:390px){
+  :root{
+    --pt-logo-header-size:70px;
+    --pt-logo-footer-size:74px;
+  }
+}
+
 /* Ajuste móvil v2: encabezado y bloque de zonas estables */
 @media (max-width:760px){
   .pt-header{
@@ -139,4 +197,24 @@ img,video,iframe,svg{max-width:100%}
   .pt-hero h1{font-size:34px!important;line-height:1.04!important}
   .pt-hero h2{font-size:25px!important;line-height:1.08!important}
   .pt-zone{padding:14px!important;grid-template-columns:30px minmax(0,1fr)}
+}
+
+/* Keep the final mobile overrides square as well. */
+@media(max-width:760px){
+  .brand,
+  .pt-logo,
+  .landing-brand{
+    width:var(--pt-logo-header-size)!important;
+    height:var(--pt-logo-header-size)!important;
+    flex-basis:var(--pt-logo-header-size)!important;
+  }
+
+  .brand img,
+  .pt-logo img,
+  .landing-brand img{
+    width:100%!important;
+    max-width:100%!important;
+    height:100%!important;
+    max-height:100%!important;
+  }
 }

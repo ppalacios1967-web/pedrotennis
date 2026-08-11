@@ -1,0 +1,16 @@
+CAMBIOS APLICADOS
+
+1. Se conserva pedrotennis.com como dominio canónico.
+2. Portada: H1 ahora incluye “Clases de tenis” + zonas objetivo.
+3. Portada: title actualizado a “Clases de Tenis en CDMX y Estado de México | Pedro Tennis”.
+4. Páginas Satélite, Naucalpan, Atizapán y Polanco: H1 local específico.
+5. Páginas Niños y Adultos: H1 orientado a la búsqueda principal.
+6. index.html cambia lang de es a es-MX.
+7. sitemap.xml actualizado al 2026-08-11.
+8. Se añade guía para redireccionar clasesdetenis.com y clasesdetenis.mx por 301 en Cloudflare.
+
+NO SE CAMBIÓ
+- URLs existentes.
+- Canonicals existentes.
+- Teléfono, WhatsApp, Analytics, CSS, JavaScript o imágenes.
+- Archivo _redirects: no existe en este ZIP y no debe eliminarse del despliegue actual.
