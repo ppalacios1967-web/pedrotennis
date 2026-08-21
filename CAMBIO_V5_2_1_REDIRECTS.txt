@@ -1,0 +1,9 @@
+Pedro Tennis V5.2.1
+Se combinaron las reglas SEO de V5.2 con las 3 rutas históricas confirmadas en producción.
+
+Rutas protegidas:
+- /para-tus-hijos y /para-tus-hijos.html -> /clases-de-tenis-para-ninos
+- /tenis-para-ti y /tenis-para-ti.html -> /clases-de-tenis-para-adultos
+- /clinicas-para-damas y /clinicas-para-damas.html -> /clinicas-de-tenis-para-mujeres
+
+Todas usan 301 permanente.

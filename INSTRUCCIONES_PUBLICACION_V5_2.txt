@@ -1,0 +1,30 @@
+PEDRO TENNIS — PUBLICACIÓN V5.2
+
+1. Este paquete está pensado para producción web, no para abrir por file://.
+2. Haz primero un Preview Deployment.
+3. IMPORTANTE: si tu repositorio ya tiene un archivo _redirects con reglas adicionales,
+   NO lo reemplaces a ciegas. Combina sus reglas existentes con las reglas de este paquete.
+4. No cambies las reglas ya configuradas para:
+   - clasesdetenis.com
+   - clasesdetenis.mx
+   - www.pedrotennis.com
+   - HTTP -> HTTPS
+5. Comprueba en Preview:
+   /clases-de-tenis-polanco
+   /clases-de-tenis-atizapan
+   /clases-de-tenis-satelite
+   /clases-de-tenis-naucalpan
+   /clases-de-tenis-para-ninos
+   /clases-de-tenis-para-adultos
+6. Comprueba que las mismas URLs terminadas en .html respondan 301 y lleguen a la limpia.
+7. Tras publicar, no elimines propiedades ni URLs en Search Console.
+8. Envía sitemap.xml y vigila clics, impresiones, 404 y páginas indexadas.
+
+
+ACTUALIZACIÓN V5.2.1
+- Se integraron las 3 rutas históricas que estaban activas en producción:
+  /para-tus-hijos -> /clases-de-tenis-para-ninos (301)
+  /tenis-para-ti -> /clases-de-tenis-para-adultos (301)
+  /clinicas-para-damas -> /clinicas-de-tenis-para-mujeres (301)
+- También se añadieron sus variantes .html.
+- Sustituye el _redirects de la V5.2 por este _redirects V5.2.1 al hacer el Preview.

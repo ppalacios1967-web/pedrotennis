@@ -1,0 +1,22 @@
+PEDRO TENNIS — V5.1 PRODUCCIÓN WEB FINAL
+
+ESTA ES LA VERSIÓN PARA SUBIR AL DOMINIO.
+
+CARACTERÍSTICAS
+- Enlaces internos limpios, sin .html.
+- Canonicals limpios en https://pedrotennis.com.
+- Sitemap con URLs limpias.
+- Schema Person = Pedro Palacios.
+- Schema Organization = Pedro Tennis.
+- WhatsApp, YouTube, Analytics y menú móvil activos.
+- Página 404 incluida.
+- 12 landings indexables + Home.
+- No está diseñada para navegación mediante file:// en Windows.
+
+IMPORTANTE AL SUBIR
+1. No borres archivos de configuración existentes del repositorio.
+2. Conserva el _redirects actual.
+3. No cambies el dominio canonical.
+4. No cambies las redirecciones actuales de clasesdetenis.com y clasesdetenis.mx.
+5. Haz primero un Preview Deployment en Cloudflare.
+6. Revisa las 12 rutas limpias antes de hacer merge a producción.
