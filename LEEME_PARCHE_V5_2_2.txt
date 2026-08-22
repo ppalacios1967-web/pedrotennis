@@ -1,0 +1,12 @@
+PEDRO TENNIS — PARCHE V5.2.2 PARA PREVIEW
+
+Corrige únicamente la estructura HTML del enlace "Saltar al contenido".
+
+PASOS:
+1. En GitHub abre la rama preview-v5-2.
+2. Add file > Upload files.
+3. Sube todos los HTML de este parche.
+4. Commit directamente a preview-v5-2.
+5. No hagas Pull Request todavía.
+
+No modifica _redirects, sitemap, robots, estilos, imágenes ni configuración de Cloudflare.

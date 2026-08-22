@@ -1,0 +1,31 @@
+PEDRO TENNIS — V5.2 MIGRACIÓN SEO SEGURA
+
+DATOS REALES DE SEARCH CONSOLE (últimos 3 meses exportados)
+- URLs con rendimiento registradas: 15
+- Clics acumulados en esas URLs: 41
+- Impresiones acumuladas: 620
+- Variantes antiguas que requieren 301: 8
+- Clics asociados a variantes que serán consolidadas: 5
+- Impresiones asociadas a variantes que serán consolidadas: 92
+
+PROTECCIÓN APLICADA
+- pedrotennis.com permanece como dominio canonical.
+- Todas las páginas SEO principales conservan su landing individual.
+- Las variantes .html reciben 301 a la misma URL limpia.
+- /index.html recibe 301 a /.
+- Se normalizan las barras finales de las rutas conocidas.
+- No se redirigen páginas de zona a Home.
+- No se modifican las redirecciones ya configuradas de clasesdetenis.com o clasesdetenis.mx.
+- No se intenta duplicar el sitio en dominios secundarios.
+
+QA TÉCNICA
+- Páginas revisadas: 13
+- Enlaces internos limpios revisados: 312
+- Imágenes revisadas: 41
+- JSON-LD revisados: 13
+- Canonicals revisados: 12
+- Reglas 301 incluidas: 23
+- Incidencias: 0
+- Advertencias: 0
+
+RESULTADO: 0 incidencias. El paquete conserva las URLs con rendimiento detectadas en Search Console.

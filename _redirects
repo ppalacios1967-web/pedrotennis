@@ -1,3 +1,41 @@
-/para-tus-hijos /para-tus-hijos.html 200
-/tenis-para-ti /tenis-para-ti.html 200
-/clinicas-para-damas /clinicas-para-damas.html 200
+# Pedro Tennis V5.2.1 — preservación SEO de rutas antiguas
+# Dominio canonical: https://pedrotennis.com
+# Las reglas de dominio (HTTP→HTTPS, www→sin www y dominios secundarios)
+# se conservan en Cloudflare y no se sustituyen aquí.
+
+# Home
+/index.html / 301
+
+# Rutas históricas de producción
+/para-tus-hijos /clases-de-tenis-para-ninos 301
+/para-tus-hijos.html /clases-de-tenis-para-ninos 301
+/tenis-para-ti /clases-de-tenis-para-adultos 301
+/tenis-para-ti.html /clases-de-tenis-para-adultos 301
+/clinicas-para-damas /clinicas-de-tenis-para-mujeres 301
+/clinicas-para-damas.html /clinicas-de-tenis-para-mujeres 301
+
+# Variantes .html → URL limpia
+/clases-de-tenis-para-ninos.html /clases-de-tenis-para-ninos 301
+/clases-de-tenis-para-jovenes.html /clases-de-tenis-para-jovenes 301
+/clases-de-tenis-para-adultos.html /clases-de-tenis-para-adultos 301
+/clinicas-de-tenis.html /clinicas-de-tenis 301
+/clinicas-de-tenis-para-mujeres.html /clinicas-de-tenis-para-mujeres 301
+/profesor-de-tenis.html /profesor-de-tenis 301
+/comunidad.html /comunidad 301
+/clases-de-tenis-satelite.html /clases-de-tenis-satelite 301
+/clases-de-tenis-naucalpan.html /clases-de-tenis-naucalpan 301
+/clases-de-tenis-polanco.html /clases-de-tenis-polanco 301
+/clases-de-tenis-atizapan.html /clases-de-tenis-atizapan 301
+
+# Barra final → URL limpia
+/clases-de-tenis-para-ninos/ /clases-de-tenis-para-ninos 301
+/clases-de-tenis-para-jovenes/ /clases-de-tenis-para-jovenes 301
+/clases-de-tenis-para-adultos/ /clases-de-tenis-para-adultos 301
+/clinicas-de-tenis/ /clinicas-de-tenis 301
+/clinicas-de-tenis-para-mujeres/ /clinicas-de-tenis-para-mujeres 301
+/profesor-de-tenis/ /profesor-de-tenis 301
+/comunidad/ /comunidad 301
+/clases-de-tenis-satelite/ /clases-de-tenis-satelite 301
+/clases-de-tenis-naucalpan/ /clases-de-tenis-naucalpan 301
+/clases-de-tenis-polanco/ /clases-de-tenis-polanco 301
+/clases-de-tenis-atizapan/ /clases-de-tenis-atizapan 301
