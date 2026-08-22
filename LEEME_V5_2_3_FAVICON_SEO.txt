@@ -1,0 +1,24 @@
+PEDRO TENNIS — V5.2.3 FAVICON OFICIAL + SEO FINO
+
+CAMBIO APLICADO
+- Favicon nuevo basado en el emblema de Pedro Tennis / Escuela de Tenis Pedro Palacios.
+- Se usa una versión compacta “PP” para que se reconozca mejor en tamaños pequeños.
+- favicon-48x48.png como icono principal (adecuado para buscadores y navegadores).
+- favicon.svg, favicon.ico y favicon-32x32.png para compatibilidad.
+- Apple Touch Icon de 180x180.
+- Iconos 192x192 y 512x512 para site.webmanifest.
+- Referencias actualizadas en todos los HTML, incluido 404.html.
+
+VERIFICACIONES
+- Enlaces internos del paquete permanecen limpios, sin .html.
+- Niños: 4 a 10 años.
+- Jóvenes: 12 a 16 años y enlace directo a /clases-de-tenis-para-jovenes.
+- Home conserva enlace a /profesor-de-tenis.
+- Polanco conserva H1 “Clases de tenis en Polanco”.
+- _redirects, sitemap.xml y robots.txt NO se incluyen ni se modifican en este parche.
+
+IMPORTANTE
+- Sube este parche primero a una rama Preview, no directamente a main.
+- No borres archivos antiguos del repositorio.
+- Este paquete NO contiene ni reemplaza _headers ni wrangler.jsonc.
+- Google decide cuándo vuelve a rastrear y mostrar el favicon; el cambio no es inmediato ni garantizado.
