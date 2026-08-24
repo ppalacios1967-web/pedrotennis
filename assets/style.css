@@ -328,6 +328,9 @@ details p{color:var(--muted);margin-bottom:0}
 .footgrid strong{color:var(--tennis)}
 .footlinks{display:grid;gap:8px;color:#d7e0e8;font-size:.94rem}
 .footlinks a:hover{color:var(--tennis)}
+.footer-legal{display:flex;gap:18px;flex-wrap:wrap;padding-top:22px;font-size:.9rem}
+.footer-legal a{color:#d7e0e8;text-decoration:none}
+.footer-legal a:hover{color:var(--tennis)}
 
 .inner-hero{padding:52px 0 26px}
 .inner-hero .hero-grid{grid-template-columns:1fr .82fr}
@@ -351,6 +354,50 @@ details p{color:var(--muted);margin-bottom:0}
  background:linear-gradient(90deg,var(--blue),var(--tennis))
 }
 
+/* Páginas de confianza V5.3 */
+.policy-hero{padding:58px 0 34px}
+.policy-hero .lead{max-width:760px}
+.policy-layout{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) 280px;
+ gap:44px;
+ align-items:start
+}
+.policy-content{max-width:840px}
+.policy-section{
+ background:#fff;
+ border:1px solid var(--line);
+ border-radius:22px;
+ padding:28px;
+ margin-bottom:18px;
+ box-shadow:0 10px 28px rgba(7,27,51,.05)
+}
+.policy-section h2{font-size:1.75rem;margin-bottom:12px}
+.policy-section h3{font-size:1.15rem;margin-top:24px}
+.policy-section p:last-child,.policy-section ul:last-child{margin-bottom:0}
+.policy-section p,.policy-section li{color:var(--muted)}
+.policy-section a{color:var(--blue);font-weight:800}
+.policy-nav{
+ position:sticky;
+ top:110px;
+ background:var(--navy);
+ color:#fff;
+ border-radius:22px;
+ padding:24px
+}
+.policy-nav strong{display:block;color:var(--tennis);margin-bottom:12px}
+.policy-nav a{display:block;color:#d7e0e8;text-decoration:none;padding:6px 0}
+.policy-nav a:hover{color:var(--tennis)}
+.notice{
+ background:var(--soft2);
+ border:1px solid #d9ee9d;
+ border-left:6px solid var(--tennis2);
+ border-radius:16px;
+ padding:18px 20px;
+ color:#344252
+}
+.credential-note{font-size:.9rem;color:var(--muted);margin-top:8px}
+
 @media(max-width:900px){
  .navlinks{display:none}
  .hero-grid,.profile,.grid-3,.grid-2,.zones,.footgrid,.inner-hero .hero-grid{grid-template-columns:1fr}
@@ -359,6 +406,8 @@ details p{color:var(--muted);margin-bottom:0}
  .gallery img:first-child{grid-row:auto;grid-column:span 2;min-height:360px}
  .hero-note{left:14px}
  .feature-list{grid-template-columns:1fr}
+ .policy-layout{grid-template-columns:1fr}
+ .policy-nav{position:static;order:-1}
 }
 @media(max-width:560px){
  h1{font-size:3rem}
