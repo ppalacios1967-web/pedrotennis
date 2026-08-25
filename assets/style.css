@@ -1913,3 +1913,22 @@ details p{color:var(--muted);margin-bottom:0}
   .video-grid{grid-template-columns:1fr}
   .video-head{align-items:flex-start;flex-direction:column}
 }
+
+/* V5.3.1 — Jerarquía de títulos más contenida */
+h1{font-size:clamp(2.4rem,5vw,4.6rem)}
+h2{font-size:clamp(1.8rem,3.5vw,3rem)}
+.inner-hero h1{font-size:clamp(2.3rem,4.5vw,4rem)}
+.home-simple .hero-copy h1{
+  font-size:clamp(2.35rem,4.2vw,3.5rem);
+  max-width:12ch;
+}
+.home-simple .section-head h2{font-size:clamp(1.8rem,3.2vw,2.75rem)}
+
+@media(max-width:560px){
+  h1{font-size:2.2rem}
+  h2{font-size:1.8rem}
+  .inner-hero h1{font-size:2.1rem}
+  .home-simple .hero-copy h1{font-size:2.05rem;line-height:1.04}
+  .home-simple .section-head h2{font-size:1.75rem}
+  .policy-section h2{font-size:1.5rem}
+}
