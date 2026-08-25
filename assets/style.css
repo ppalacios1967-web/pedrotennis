@@ -1287,6 +1287,10 @@ details p{color:var(--muted);margin-bottom:0}
   padding:18px 20px;
   color:#344252;
 }
+.note p{margin:8px 0 0}
+.venue-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.venue-list span{display:inline-flex;align-items:center;padding:8px 11px;border-radius:999px;background:#fff;border:1px solid #d5e4b1;color:var(--ink);font-weight:800;font-size:.88rem}
+.note .micro{margin-top:14px;color:var(--muted)}
 .testimonial-ready{
   background:#fff;
   border:1px dashed #b8c7d6;
