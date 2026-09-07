@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Encuentra tu clínica de tenis | Pedro Tennis</title>
+<meta name="description" content="Filtro rápido para encontrar una clínica de tenis en Geógrafos con Pedro Tennis."/>
+<meta name="robots" content="noindex,follow"/>
+<link rel="canonical" href="https://pedrotennis.com/filtro-clinicas"/>
+<link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+<style>
+.filter-shell{min-height:100vh;background:linear-gradient(180deg,#f5f9fd,#fff);padding:34px 16px 70px}.filter-card{max-width:760px;margin:0 auto;background:#fff;border:1px solid #dfe7ef;border-radius:24px;box-shadow:0 18px 60px rgba(7,26,47,.10);overflow:hidden}.filter-head{padding:28px 28px 18px;background:#071a2f;color:#fff}.filter-head .logo{color:#fff}.filter-head p{color:#dbe7f3;margin:10px 0 0}.progress{height:7px;background:#e7edf3}.progress span{display:block;height:100%;width:12.5%;background:#b8db3b;transition:.25s}.step{display:none;padding:30px}.step.active{display:block}.step h1,.step h2{margin-top:0;color:#071a2f}.step p{color:#516171;line-height:1.55}.options{display:grid;gap:12px;margin:22px 0}.option{width:100%;text-align:left;border:1px solid #d9e2ea;background:#fff;border-radius:14px;padding:16px 18px;font:inherit;font-weight:700;color:#17314a;cursor:pointer}.option:hover,.option.selected{border-color:#87a900;background:#f7fbe9}.field{width:100%;padding:15px;border:1px solid #ced9e3;border-radius:12px;font:inherit;margin:10px 0}.nav-actions{display:flex;gap:10px;justify-content:space-between;margin-top:24px}.nav-actions button,.wa-result{border:0;border-radius:12px;padding:14px 20px;font:inherit;font-weight:800;cursor:pointer}.back{background:#edf2f6;color:#17314a}.next,.wa-result{background:#b8db3b;color:#15250a}.next:disabled{opacity:.45;cursor:not-allowed}.result-box{padding:18px;border-radius:16px;background:#f6f9fb;margin:18px 0}.result-box strong{display:block;color:#071a2f;font-size:1.15rem;margin-bottom:6px}.wa-result{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}.small{font-size:.9rem;color:#657687}.geo-note{padding:12px 14px;border-radius:12px;background:#eef7e5;color:#2e4c1a;font-weight:700}.particular{margin-top:16px;padding:14px;border:1px solid #d9e2ea;border-radius:12px}.particular a{font-weight:800}@media(max-width:600px){.filter-shell{padding:0}.filter-card{border-radius:0;min-height:100vh}.filter-head,.step{padding:22px}.nav-actions{flex-direction:column-reverse}.nav-actions button,.wa-result{width:100%}}
+</style>
+</head>
+<body>
+<div class="filter-shell">
+  <div class="filter-card">
+    <div class="filter-head">
+      <a class="logo" href="/">Pedro <span>Tennis</span></a>
+      <p>Encuentra la clínica que mejor se adapta a tu perfil.</p>
+    </div>
+    <div class="progress"><span id="progress"></span></div>
+
+    <section class="step active" data-step="1">
+      <h1>Primero, ¿para quién buscas la clínica?</h1>
+      <p>Las clínicas se imparten únicamente en las canchas de Geógrafos.</p>
+      <div class="options" data-name="tipo">
+        <button class="option" data-value="Niño/a">Para mi hijo/a</button>
+        <button class="option" data-value="Mujer adulta">Para mí · Clínica para mujeres</button>
+      </div>
+      <div class="nav-actions"><span></span><button class="next" disabled>Siguiente</button></div>
+    </section>
+
+    <section class="step" data-step="2">
+      <h2>¿Qué edad tiene el jugador?</h2>
+      <input class="field" id="edad" type="number" min="4" max="90" inputmode="numeric" placeholder="Ej. 8"/>
+      <p class="small">Esto nos ayuda a ubicar el grupo adecuado.</p>
+      <div class="nav-actions"><button class="back">Atrás</button><button class="next" disabled>Siguiente</button></div>
+    </section>
+
+    <section class="step" data-step="3">
+      <h2>¿Cuál es su nivel actual?</h2>
+      <div class="options" data-name="nivel">
+        <button class="option" data-value="Nunca ha jugado">Nunca ha jugado</button>
+        <button class="option" data-value="Principiante">Principiante</button>
+        <button class="option" data-value="Intermedio">Intermedio</button>
+        <button class="option" data-value="Avanzado">Avanzado</button>
+      </div>
+      <div class="nav-actions"><button class="back">Atrás</button><button class="next" disabled>Siguiente</button></div>
+    </section>
+
+    <section class="step" data-step="4">
+      <h2>¿Qué busca principalmente?</h2>
+      <div class="options" data-name="objetivo">
+        <button class="option" data-value="Aprender tenis">Aprender tenis</button>
+        <button class="option" data-value="Mejorar técnica">Mejorar técnica</button>
+        <button class="option" data-value="Ejercicio y bienestar">Ejercicio y bienestar</button>
+        <button class="option" data-value="Competencia">Preparación para competencia</button>
+      </div>
+      <div class="nav-actions"><button class="back">Atrás</button><button class="next" disabled>Siguiente</button></div>
+    </section>
+
+    <section class="step" data-step="5">
+      <h2>¿Qué días tiene disponibilidad?</h2>
+      <input class="field" id="dias" type="text" placeholder="Ej. martes y jueves"/>
+      <input class="field" id="horario" type="text" placeholder="Horario aproximado, ej. 9:00 a 11:00"/>
+      <div class="nav-actions"><button class="back">Atrás</button><button class="next" disabled>Siguiente</button></div>
+    </section>
+
+    <section class="step" data-step="6">
+      <h2>¿Puede asistir regularmente a Geógrafos?</h2>
+      <p class="geo-note">Las clínicas de Pedro Tennis se imparten solamente en Geógrafos.</p>
+      <div class="options" data-name="geografos">
+        <button class="option" data-value="Sí">Sí, puedo asistir a Geógrafos</button>
+        <button class="option" data-value="No">No me es posible</button>
+      </div>
+      <div class="nav-actions"><button class="back">Atrás</button><button class="next" disabled>Siguiente</button></div>
+    </section>
+
+    <section class="step" data-step="7">
+      <h2>¿Cuándo le gustaría comenzar?</h2>
+      <div class="options" data-name="inicio">
+        <button class="option" data-value="Lo antes posible">Lo antes posible</button>
+        <button class="option" data-value="Este mes">Este mes</button>
+        <button class="option" data-value="Más adelante">Más adelante</button>
+      </div>
+      <div class="nav-actions"><button class="back">Atrás</button><button class="next" disabled>Ver recomendación</button></div>
+    </section>
+
+    <section class="step" data-step="8">
+      <h2 id="resultTitle">Tu recomendación</h2>
+      <div class="result-box" id="resultBox"></div>
+      <a class="wa-result" id="waResult" target="_blank" rel="noopener">Consultar disponibilidad por WhatsApp</a>
+      <div class="particular" id="particularBox" hidden>
+        Si Geógrafos no te funciona, también puedes consultar <strong>clases particulares</strong> en Geógrafos, Calacoaya o Centro Cívico. <a id="waParticular" target="_blank" rel="noopener">Preguntar por clases particulares</a>.
+      </div>
+      <div class="nav-actions"><button class="back">Modificar respuestas</button><span></span></div>
+    </section>
+  </div>
+</div>
+<script>
+(function(){
+  const data={}; let step=1; const total=8;
+  const params=new URLSearchParams(location.search);
+  const origen=params.get('origen')||'web';
+  function show(n){step=n;document.querySelectorAll('.step').forEach(s=>s.classList.toggle('active',Number(s.dataset.step)===n));document.getElementById('progress').style.width=(n/total*100)+'%';window.scrollTo({top:0,behavior:'smooth'});if(n===8)renderResult();}
+  document.querySelectorAll('.options').forEach(group=>group.addEventListener('click',e=>{const b=e.target.closest('.option');if(!b)return;group.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');data[group.dataset.name]=b.dataset.value;group.closest('.step').querySelector('.next').disabled=false;}));
+  const edad=document.getElementById('edad'); edad.addEventListener('input',()=>{data.edad=edad.value;edad.closest('.step').querySelector('.next').disabled=!edad.value;});
+  function textCheck(){data.dias=document.getElementById('dias').value.trim();data.horario=document.getElementById('horario').value.trim();document.getElementById('dias').closest('.step').querySelector('.next').disabled=!(data.dias&&data.horario);}
+  document.getElementById('dias').addEventListener('input',textCheck);document.getElementById('horario').addEventListener('input',textCheck);
+  document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>show(Math.min(total,step+1))));document.querySelectorAll('.back').forEach(b=>b.addEventListener('click',()=>show(Math.max(1,step-1))));
+  function renderResult(){
+    const compatible=data.geografos==='Sí';
+    document.getElementById('resultTitle').textContent=compatible?'Tu perfil puede ser compatible con una clínica':'Tenemos otra opción para ti';
+    document.getElementById('resultBox').innerHTML=compatible?'<strong>Siguiente paso: revisar grupo y lugar disponible.</strong>Por tu perfil, vale la pena consultar qué clínica puede ajustarse mejor a tu edad, nivel y horario.':'<strong>Las clínicas se imparten únicamente en Geógrafos.</strong>Como esa sede no te funciona, podemos revisar una clase particular en alguna de las tres sedes disponibles.';
+    const msg=`Hola Pedro, terminé el filtro de clínicas en PedroTennis.com.\nOrigen: ${origen}\nPerfil: ${data.tipo||''}\nEdad: ${data.edad||''}\nNivel: ${data.nivel||''}\nObjetivo: ${data.objetivo||''}\nDisponibilidad: ${data.dias||''}, ${data.horario||''}\nPuede asistir a Geógrafos: ${data.geografos||''}\nQuiere comenzar: ${data.inicio||''}.\nQuisiera consultar disponibilidad.`;
+    document.getElementById('waResult').href='https://wa.me/5215521047277?text='+encodeURIComponent(msg);
+    const pb=document.getElementById('particularBox');pb.hidden=compatible;
+    document.getElementById('waParticular').href='https://wa.me/5215521047277?text='+encodeURIComponent('Hola Pedro, hice el filtro de clínicas pero Geógrafos no me funciona. Quisiera información de clases particulares en Geógrafos, Calacoaya o Centro Cívico.');
+  }
+  if(origen==='ninos'){const b=document.querySelector('[data-name="tipo"] [data-value="Niño/a"]');b.click();}
+  if(origen==='damas'){const b=document.querySelector('[data-name="tipo"] [data-value="Mujer adulta"]');b.click();}
+})();
+</script>
+</body>
+</html>
