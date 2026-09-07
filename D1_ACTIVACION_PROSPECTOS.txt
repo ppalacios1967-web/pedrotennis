@@ -1,0 +1,35 @@
+ACTIVACIÓN D1 — PEDRO TENNIS PROSPECTOS
+
+1) En Cloudflare D1 crear una base llamada:
+   pedrotennis-prospectos
+
+2) Copiar el Database ID que entrega Cloudflare.
+
+3) En wrangler.jsonc agregar:
+
+"main": "./worker/index.js",
+"assets": {
+  "directory": ".",
+  "binding": "ASSETS",
+  "run_worker_first": ["/api/*"]
+},
+"d1_databases": [
+  {
+    "binding": "DB",
+    "database_name": "pedrotennis-prospectos",
+    "database_id": "PEGAR_DATABASE_ID_AQUI",
+    "migrations_dir": "migrations"
+  }
+]
+
+4) Aplicar la migración:
+   npx wrangler d1 migrations apply pedrotennis-prospectos --remote
+
+5) Desplegar:
+   npx wrangler deploy
+
+IMPORTANTE:
+- No activar el binding con un ID ficticio.
+- El filtro público solo debe CREAR prospectos.
+- Las lecturas administrativas del CRM deberán protegerse antes de exponerlas públicamente.
+- La tabla prospecto_eventos conserva continuidad del historial.
