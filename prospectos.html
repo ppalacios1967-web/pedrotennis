@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Prospectos | Pedro Tennis</title>
+<meta name="robots" content="noindex,nofollow,noarchive"/>
+<meta name="theme-color" content="#071a2f"/>
+<link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+<style>
+:root{--navy:#071a2f;--lime:#b8db3b;--soft:#f4f7fa;--line:#dce4eb;--muted:#667788;--danger:#9b2c2c}
+*{box-sizing:border-box}body{margin:0;background:#eef3f7;color:#13293d;font-family:Arial,Helvetica,sans-serif}.app{max-width:1180px;margin:auto;padding:20px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.brand{font-size:1.35rem;font-weight:900;color:var(--navy)}.brand span{color:#739400}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btnx{border:0;border-radius:12px;padding:12px 15px;font-weight:800;cursor:pointer;background:#fff;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.05)}.btnx.primary{background:var(--lime)}.btnx.dark{background:var(--navy);color:#fff}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.stat b{display:block;font-size:1.75rem;color:var(--navy)}.stat span{font-size:.9rem;color:var(--muted)}.toolbar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}.search,.select{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;font:inherit}.search{flex:1;min-width:220px}.board{display:grid;gap:12px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;grid-template-columns:1.5fr .9fr .9fr auto;gap:14px;align-items:center}.name{font-weight:900;font-size:1.08rem}.meta{color:var(--muted);font-size:.9rem;line-height:1.45}.pill{display:inline-block;border-radius:999px;padding:6px 9px;font-size:.78rem;font-weight:800;background:#edf2f6}.pill.a{background:#eef8cf;color:#405500}.pill.b{background:#fff5d8;color:#735400}.pill.c{background:#edf2f6;color:#52606c}.status{font-weight:800}.card-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.iconbtn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px;cursor:pointer}.empty{background:#fff;border:1px dashed #b8c5d2;border-radius:16px;padding:34px;text-align:center;color:var(--muted)}dialog{border:0;border-radius:20px;padding:0;max-width:680px;width:min(94vw,680px);box-shadow:0 25px 90px rgba(0,0,0,.25)}dialog::backdrop{background:rgba(7,26,47,.45)}.modal{padding:22px}.modal h2{margin-top:0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{width:100%;border:1px solid #ccd7e0;border-radius:11px;padding:12px;font:inherit}.label{display:block;font-size:.82rem;font-weight:800;color:#526474;margin:9px 0 5px}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.pastebox{min-height:180px}.note{font-size:.88rem;color:var(--muted);line-height:1.45}.privacy{font-size:.82rem;color:#71808e;margin-top:16px}.danger{color:var(--danger)}@media(max-width:820px){.stats{grid-template-columns:1fr 1fr}.card{grid-template-columns:1fr}.card-actions{justify-content:flex-start}.grid2{grid-template-columns:1fr}}@media(max-width:460px){.app{padding:12px}.stats{grid-template-columns:1fr 1fr}.top{align-items:flex-start;flex-direction:column}.top-actions{width:100%}.top-actions .btnx{flex:1}.stat{padding:14px}.stat b{font-size:1.45rem}}
+</style>
+</head>
+<body>
+<main class="app">
+  <div class="top">
+    <div><div class="brand">Pedro <span>Tennis</span> · Prospectos</div><div class="meta">Seguimiento local de interesados en clínicas</div></div>
+    <div class="top-actions"><button class="btnx" id="importBtn">Pegar filtro</button><button class="btnx primary" id="newBtn">+ Prospecto</button><button class="btnx" id="exportBtn">Respaldo</button></div>
+  </div>
+  <section class="stats">
+    <div class="stat"><b id="sTotal">0</b><span>Total activos</span></div>
+    <div class="stat"><b id="sHot">0</b><span>Prioridad alta</span></div>
+    <div class="stat"><b id="sPending">0</b><span>Por contactar</span></div>
+    <div class="stat"><b id="sEnrolled">0</b><span>Inscritos</span></div>
+  </section>
+  <div class="toolbar">
+    <input class="search" id="search" placeholder="Buscar por nombre, clínica, nivel o horario"/>
+    <select class="select" id="filterStatus"><option value="">Todos los estados</option><option>Nuevo</option><option>Contactado</option><option>Interesado</option><option>Clase prueba</option><option>Confirmado</option><option>Inscrito</option><option>No interesado</option></select>
+    <select class="select" id="filterPriority"><option value="">Todas las prioridades</option><option value="C-A">C-A · Alta</option><option value="C-B">C-B · Media</option><option value="C-C">C-C · Seguimiento</option></select>
+  </div>
+  <section class="board" id="board"></section>
+  <p class="privacy">Los datos se guardan únicamente en este navegador mediante almacenamiento local. No se envían al servidor de PedroTennis.com desde esta pantalla.</p>
+</main>
+
+<dialog id="editDialog"><form method="dialog" class="modal" id="editForm"><h2 id="editTitle">Nuevo prospecto</h2><input type="hidden" id="pid"/>
+<div class="grid2"><div><label class="label">Nombre</label><input class="field" id="nombre" required/></div><div><label class="label">Teléfono</label><input class="field" id="telefono" inputmode="tel"/></div></div>
+<div class="grid2"><div><label class="label">Perfil / clínica</label><select class="field" id="tipo"><option>Niño/a</option><option>Mujer adulta</option><option>Otro</option></select></div><div><label class="label">Edad</label><input class="field" id="edad" inputmode="numeric"/></div></div>
+<div class="grid2"><div><label class="label">Nivel</label><select class="field" id="nivel"><option>Nunca ha jugado</option><option>Principiante</option><option>Intermedio</option><option>Avanzado</option></select></div><div><label class="label">Prioridad</label><select class="field" id="prioridad"><option value="C-A">C-A · Alta</option><option value="C-B" selected>C-B · Media</option><option value="C-C">C-C · Seguimiento</option></select></div></div>
+<div class="grid2"><div><label class="label">Días</label><input class="field" id="dias"/></div><div><label class="label">Horario</label><input class="field" id="horario"/></div></div>
+<div class="grid2"><div><label class="label">Objetivo</label><input class="field" id="objetivo"/></div><div><label class="label">Quiere comenzar</label><input class="field" id="inicio"/></div></div>
+<div class="grid2"><div><label class="label">Origen</label><input class="field" id="origen" placeholder="web / niños / damas / recomendación"/></div><div><label class="label">Estado</label><select class="field" id="estado"><option>Nuevo</option><option>Contactado</option><option>Interesado</option><option>Clase prueba</option><option>Confirmado</option><option>Inscrito</option><option>No interesado</option></select></div></div>
+<label class="label">Notas</label><textarea class="field" id="notas" rows="3"></textarea>
+<div class="modal-actions"><button class="btnx" value="cancel">Cancelar</button><button class="btnx dark" id="saveBtn" value="default">Guardar</button></div></form></dialog>
+
+<dialog id="pasteDialog"><form method="dialog" class="modal"><h2>Pegar mensaje del filtro</h2><p class="note">Copia el mensaje que te llegó por WhatsApp desde el filtro de clínicas y pégalo aquí. El sistema intentará llenar los campos automáticamente.</p><textarea class="field pastebox" id="pasteText" placeholder="Hola Pedro, terminé el filtro de clínicas...\nPerfil: Niño/a\nNivel: Principiante..."></textarea><div class="modal-actions"><button class="btnx" value="cancel">Cancelar</button><button class="btnx dark" id="parseBtn" value="default">Convertir en prospecto</button></div></form></dialog>
+
+<script>
+(function(){
+const KEY='pedrotennis_prospectos_v1';
+const $=id=>document.getElementById(id); let items=load();
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function persist(){localStorage.setItem(KEY,JSON.stringify(items));render()}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fmtDate(s){if(!s)return'';try{return new Intl.DateTimeFormat('es-MX',{day:'2-digit',month:'short'}).format(new Date(s))}catch(e){return''}}
+function priorityClass(p){return p==='C-A'?'a':p==='C-B'?'b':'c'}
+function render(){
+ const q=$('search').value.toLowerCase().trim(), fs=$('filterStatus').value, fp=$('filterPriority').value;
+ const active=items.filter(x=>x.estado!=='No interesado'); $('sTotal').textContent=active.length;$('sHot').textContent=active.filter(x=>x.prioridad==='C-A').length;$('sPending').textContent=active.filter(x=>x.estado==='Nuevo').length;$('sEnrolled').textContent=items.filter(x=>x.estado==='Inscrito').length;
+ const list=items.filter(x=>(!fs||x.estado===fs)&&(!fp||x.prioridad===fp)&&(!q||JSON.stringify(x).toLowerCase().includes(q))).sort((a,b)=>{const rank={'C-A':0,'C-B':1,'C-C':2};return (rank[a.prioridad]??3)-(rank[b.prioridad]??3)||new Date(b.createdAt)-new Date(a.createdAt)});
+ $('board').innerHTML=list.length?list.map(x=>`<article class="card"><div><div class="name">${esc(x.nombre||'Sin nombre')} <span class="pill ${priorityClass(x.prioridad)}">${esc(x.prioridad||'C-B')}</span></div><div class="meta">${esc(x.tipo)}${x.edad?' · '+esc(x.edad)+' años':''} · ${esc(x.nivel)}<br>${esc(x.dias)}${x.horario?' · '+esc(x.horario):''}${x.origen?' · Origen: '+esc(x.origen):''}</div></div><div><div class="status">${esc(x.estado)}</div><div class="meta">${esc(x.objetivo||'Sin objetivo')}<br>${x.inicio?'Inicio: '+esc(x.inicio):''}</div></div><div><div class="meta">Alta: ${fmtDate(x.createdAt)}<br>${x.telefono?esc(x.telefono):'Sin teléfono'}</div></div><div class="card-actions"><button class="iconbtn" data-act="wa" data-id="${x.id}" title="WhatsApp">WhatsApp</button><button class="iconbtn" data-act="edit" data-id="${x.id}">Editar</button><button class="iconbtn danger" data-act="del" data-id="${x.id}">Eliminar</button></div></article>`).join(''):`<div class="empty"><strong>No hay prospectos en esta vista.</strong><br>Puedes agregar uno manualmente o pegar el mensaje generado por el filtro.</div>`;
+}
+function openEdit(x={}){ $('pid').value=x.id||'';$('nombre').value=x.nombre||'';$('telefono').value=x.telefono||'';$('tipo').value=x.tipo||'Niño/a';$('edad').value=x.edad||'';$('nivel').value=x.nivel||'Principiante';$('prioridad').value=x.prioridad||'C-B';$('dias').value=x.dias||'';$('horario').value=x.horario||'';$('objetivo').value=x.objetivo||'';$('inicio').value=x.inicio||'';$('origen').value=x.origen||'';$('estado').value=x.estado||'Nuevo';$('notas').value=x.notas||'';$('editTitle').textContent=x.id?'Editar prospecto':'Nuevo prospecto';$('editDialog').showModal();}
+function save(){const id=$('pid').value;const prev=items.find(x=>x.id===id);const obj={id:id||crypto.randomUUID(),nombre:$('nombre').value.trim(),telefono:$('telefono').value.trim(),tipo:$('tipo').value,edad:$('edad').value.trim(),nivel:$('nivel').value,prioridad:$('prioridad').value,dias:$('dias').value.trim(),horario:$('horario').value.trim(),objetivo:$('objetivo').value.trim(),inicio:$('inicio').value.trim(),origen:$('origen').value.trim(),estado:$('estado').value,notas:$('notas').value.trim(),createdAt:prev?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString()};if(!obj.nombre)obj.nombre='Prospecto sin nombre';if(prev)items=items.map(x=>x.id===id?obj:x);else items.unshift(obj);persist()}
+function parseMessage(t){const get=(label)=>{const m=t.match(new RegExp('^'+label+'\\s*:\\s*(.+)$','mi'));return m?m[1].trim():''};const disp=get('Disponibilidad');let dias='',horario='';if(disp){const parts=disp.split(',');dias=(parts.shift()||'').trim();horario=parts.join(',').trim()}return {nombre:get('Nombre')||'Prospecto WhatsApp',telefono:get('Teléfono')||get('Telefono'),tipo:get('Perfil')||'Otro',edad:get('Edad'),nivel:get('Nivel')||'Principiante',prioridad:get('Referencia')||get('Prioridad')||'C-B',dias,horario,objetivo:get('Objetivo'),inicio:get('Quiere comenzar'),origen:get('Origen')||'web',estado:'Nuevo',notas:'Importado desde mensaje del filtro'} }
+$('newBtn').onclick=()=>openEdit();$('importBtn').onclick=()=>{$('pasteText').value='';$('pasteDialog').showModal()};$('saveBtn').onclick=e=>{e.preventDefault();save();$('editDialog').close()};$('parseBtn').onclick=e=>{e.preventDefault();const obj=parseMessage($('pasteText').value);$('pasteDialog').close();openEdit(obj)};
+$('board').addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b)return;const x=items.find(i=>i.id===b.dataset.id);if(!x)return;if(b.dataset.act==='edit')openEdit(x);if(b.dataset.act==='del'&&confirm('¿Eliminar este prospecto?')){items=items.filter(i=>i.id!==x.id);persist()}if(b.dataset.act==='wa'){const msg=`Hola ${x.nombre||''}, soy Pedro de Pedro Tennis. Te escribo para dar seguimiento a tu interés en ${x.tipo==='Niño/a'?'la clínica infantil':'la clínica de tenis'}.`;const num=(x.telefono||'').replace(/\D/g,'');window.open(num?`https://wa.me/${num}?text=${encodeURIComponent(msg)}`:`https://wa.me/5215521047277?text=${encodeURIComponent('Seguimiento pendiente: '+(x.nombre||''))}`,'_blank')}});
+['search','filterStatus','filterPriority'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));
+$('exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify(items,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='pedrotennis-prospectos-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)};
+render();
+})();
+</script>
+</body>
+</html>
