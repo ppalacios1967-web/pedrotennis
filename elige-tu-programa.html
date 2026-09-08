@@ -3,64 +3,44 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Encuentra tu opción de tenis | Pedro Tennis</title>
-<meta name="description" content="Filtro rápido para encontrar la opción de tenis adecuada con Pedro Tennis."/>
+<title>Encuentra tu clase | Pedro Tennis</title>
+<meta name="description" content="Encuentra rápidamente la opción de tenis adecuada para niños, jóvenes y adultos."/>
 <meta name="robots" content="noindex,follow"/>
 <link rel="canonical" href="https://pedrotennis.com/elige-tu-programa"/>
 <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png"/>
 <link rel="stylesheet" href="/assets/style.css"/>
 <style>
-:root{--navy:#071a2f;--lime:#b8db3b;--ink:#17314a;--muted:#617283;--line:#dbe4eb}
-*{box-sizing:border-box}.shell{min-height:100vh;background:linear-gradient(180deg,#f3f7fb,#fff);padding:24px 14px}.card{max-width:720px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 16px 55px rgba(7,26,47,.10)}.head{background:var(--navy);color:#fff;padding:26px}.head .logo{color:#fff}.head h1{font-size:clamp(1.7rem,5vw,2.4rem);margin:16px 0 8px}.head p{margin:0;color:#d9e5ee;line-height:1.5}.body{padding:26px}.step{display:none}.step.active{display:block}.step h2{margin:0 0 8px;color:var(--navy)}.hint{color:var(--muted);margin:0 0 18px;line-height:1.45}.choices{display:grid;gap:12px}.choice{width:100%;border:1px solid var(--line);border-radius:16px;background:#fff;padding:17px;text-align:left;font:inherit;color:var(--ink);cursor:pointer}.choice:hover,.choice:focus{border-color:#91ad25;background:#f9fce9;outline:none}.choice strong{display:block;font-size:1.05rem;margin-bottom:4px}.choice span{display:block;color:var(--muted);font-size:.9rem}.back{margin-top:18px;border:0;background:#edf2f6;border-radius:11px;padding:11px 14px;font-weight:800;color:var(--ink);cursor:pointer}.note{margin-top:18px;padding:13px 14px;background:#eef7e5;border-radius:12px;color:#37521f;font-size:.9rem}.help{text-align:center;border-top:1px solid #edf1f4;margin-top:22px;padding-top:18px;color:var(--muted);font-size:.9rem}.help a{font-weight:800}.ready{background:#f5f8fb;border-radius:16px;padding:18px;margin:16px 0}.go{display:flex;justify-content:center;align-items:center;text-decoration:none;border-radius:12px;padding:14px 18px;font-weight:850;background:var(--lime);color:#15250b}.micro{text-align:center;color:#6f7e8b;font-size:.82rem;margin-top:12px}@media(max-width:620px){.shell{padding:0}.card{border-radius:0;min-height:100vh}.head,.body{padding:21px}.choice{padding:15px}}
+:root{--navy:#071a2f;--lime:#b8db3b;--ink:#17314a;--muted:#617282;--line:#dce4eb}
+*{box-sizing:border-box}body{margin:0;background:#f4f8fb;color:var(--ink)}.shell{min-height:100vh;padding:20px}.card{max-width:760px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 16px 50px rgba(7,26,47,.09);overflow:hidden}.head{background:var(--navy);color:#fff;padding:24px}.head .logo{color:#fff}.head h1{font-size:clamp(1.7rem,5vw,2.3rem);line-height:1.08;margin:18px 0 8px}.head p{margin:0;color:#dce7f0}.body{padding:24px}.note{color:var(--muted);margin:0 0 18px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{border:1px solid var(--line);background:#fff;border-radius:15px;padding:17px;text-align:left;font:inherit;color:var(--ink);cursor:pointer}.choice:hover,.choice.active{border-color:#92ad28;background:#f8fbe9}.choice strong{display:block;font-size:1.02rem;margin-bottom:4px}.choice span{display:block;font-size:.9rem;color:var(--muted)}.result{display:none;margin-top:18px;padding-top:18px;border-top:1px solid #e7edf2}.result.show{display:block}.result h2{margin:0 0 8px;color:var(--navy)}.actions{display:grid;gap:10px;margin-top:14px}.go{display:flex;align-items:center;justify-content:center;padding:14px 16px;border-radius:12px;text-decoration:none;font-weight:850;background:var(--lime);color:#17250b}.go.alt{background:var(--navy);color:#fff}.help{text-align:center;margin-top:18px;color:var(--muted);font-size:.9rem}.help a{font-weight:800}.rule{font-size:.88rem;color:#526475;background:#f5f8fa;border-radius:10px;padding:10px 12px;margin-top:12px}@media(max-width:620px){.shell{padding:0}.card{border-radius:0;min-height:100vh}.head,.body{padding:21px}.choices{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="shell"><main class="card">
-<header class="head"><a class="logo" href="/">Pedro <span>Tennis</span></a><h1>Encuentra tu opción en pocos segundos.</h1><p>Solo toca la opción que más se parece a lo que buscas. Si tienes duda, Pedro te orienta.</p></header>
-<div class="body">
-<section class="step active" id="paso1">
-<h2>¿Para quién buscas tenis?</h2>
-<p class="hint">Primero elige la edad o perfil.</p>
-<div class="choices">
-<button class="choice" data-person="nino"><strong>Niño/a · 4 a 10 años</strong><span>Clínica o clase particular</span></button>
-<button class="choice" data-person="joven"><strong>Joven · 11 a 16 años</strong><span>Clase particular</span></button>
-<button class="choice" data-person="adulto"><strong>Adulto · 17 años o más</strong><span>Clase particular</span></button>
-<button class="choice" data-person="mujer"><strong>Mujer adulta</strong><span>Clínica o clase particular</span></button>
-</div>
-<div class="help">¿No sabes cuál elegir? <a href="https://wa.me/5215521047277?text=Hola%20Pedro%2C%20necesito%20ayuda%20para%20elegir%20una%20clase%20o%20cl%C3%ADnica%20de%20tenis." target="_blank" rel="noopener">Pregúntale a Pedro por WhatsApp</a>.</div>
-</section>
-
-<section class="step" id="paso2">
-<h2>¿Qué prefieres?</h2>
-<p class="hint" id="perfilElegido"></p>
-<div class="choices" id="modalidades"></div>
-<div class="note" id="regla"></div>
-<button class="back" id="volver1">← Volver</button>
-</section>
-
-<section class="step" id="paso3">
-<h2>Listo.</h2>
-<p class="hint">Ya sabemos qué camino corresponde.</p>
-<div class="ready" id="resumen"></div>
-<a class="go" id="continuar">Continuar</a>
-<p class="micro">Nada se reserva hasta que Pedro confirme disponibilidad.</p>
-<button class="back" id="volver2">← Cambiar opción</button>
-</section>
-</div></main></div>
+  <header class="head"><a class="logo" href="/">Pedro <span>Tennis</span></a><h1>¿Para quién buscas tenis?</h1><p>Elige una opción. Te llevamos directo a lo que necesitas.</p></header>
+  <div class="body">
+    <p class="note">No necesitas llenar datos ni saber qué programa elegir.</p>
+    <div class="choices" id="people">
+      <button class="choice" data-person="nino"><strong>Niño/a · 4 a 10 años</strong><span>Clínica o clase particular</span></button>
+      <button class="choice" data-person="joven"><strong>Joven · 11 a 16 años</strong><span>Clase adaptada a su nivel</span></button>
+      <button class="choice" data-person="adulto"><strong>Adulto · 17 años o más</strong><span>Aprender, retomar o mejorar</span></button>
+      <button class="choice" data-person="mujer"><strong>Mujer adulta</strong><span>Clínica o clase particular</span></button>
+    </div>
+    <section class="result" id="result"><h2 id="title"></h2><p class="note" id="text"></p><div class="actions" id="actions"></div><div class="rule" id="rule"></div></section>
+    <div class="help">¿Prefieres que Pedro te oriente? <a href="https://wa.me/5215521047277?text=Hola%20Pedro%2C%20quiero%20que%20me%20orientes%20para%20elegir%20la%20mejor%20opci%C3%B3n%20de%20tenis." target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+  </div>
+</main></div>
 <script>
 (function(){
-const $=id=>document.getElementById(id);let persona='';
-const info={
- nino:{label:'Niño/a de 4 a 10 años',modes:['clinica','particular']},
- joven:{label:'Joven de 11 a 16 años',modes:['particular']},
- adulto:{label:'Adulto de 17 años o más',modes:['particular']},
- mujer:{label:'Mujer adulta',modes:['clinica','particular']}
+const result=document.getElementById('result'),title=document.getElementById('title'),text=document.getElementById('text'),actions=document.getElementById('actions'),rule=document.getElementById('rule');
+function wa(msg){return 'https://wa.me/5215521047277?text='+encodeURIComponent(msg)}
+const data={
+ nino:{title:'Para tu hijo/a',text:'Elige solo una opción:',actions:[['Clínica infantil','/filtro-clinicas?origen=ninos',''],['Clase particular',wa('Hola Pedro, busco una clase particular para mi hijo/a de 4 a 10 años. Quisiera conocer sede y horario disponibles.'),'alt']],rule:'Clínica: únicamente en Geógrafos. Particular: Geógrafos, Calacoaya o Centro Cívico.'},
+ joven:{title:'Para un joven',text:'La ruta más sencilla es una clase particular adaptada a su nivel.',actions:[['Consultar por WhatsApp',wa('Hola Pedro, busco clases de tenis para un joven de 11 a 16 años. Quisiera conocer sede y horario disponibles.'),'']],rule:'Clases particulares en Geógrafos, Calacoaya o Centro Cívico, según disponibilidad.'},
+ adulto:{title:'Para un adulto',text:'La ruta más sencilla es una clase particular.',actions:[['Consultar por WhatsApp',wa('Hola Pedro, busco una clase particular para adulto. Quisiera conocer sede y horario disponibles.'),'']],rule:'Clases particulares en Geógrafos, Calacoaya o Centro Cívico, según disponibilidad.'},
+ mujer:{title:'Para ti',text:'Elige solo una opción:',actions:[['Clínica para mujeres','/filtro-clinicas?origen=damas',''],['Clase particular',wa('Hola Pedro, busco una clase particular para mujer adulta. Quisiera conocer sede y horario disponibles.'),'alt']],rule:'Clínica: únicamente en Geógrafos. Particular: Geógrafos, Calacoaya o Centro Cívico.'}
 };
-function show(id){document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));$(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
-function rutaDirecta(p){return p==='joven'||p==='adulto'}
-function elegirPersona(p){persona=p;if(rutaDirecta(p)){finalizar('particular');return}const c=info[p];$('perfilElegido').textContent=c.label;$('modalidades').innerHTML=`<button class="choice" data-mode="clinica"><strong>Clínica</strong><span>Grupo semanal · solo en Geógrafos</span></button><button class="choice" data-mode="particular"><strong>Clase particular</strong><span>1 hora · Geógrafos, Calacoaya o Centro Cívico</span></button>`;$('regla').textContent='Clínicas: solo Geógrafos. Particulares: Geógrafos, Calacoaya o Centro Cívico.';show('paso2')}
-function finalizar(modo){const c=info[persona];let href='',txt='';if(modo==='clinica'){href='/filtro-clinicas?origen='+(persona==='nino'?'ninos':'damas');txt='<strong>Clínica</strong><br>'+c.label+' · Geógrafos.<br>Ahora responderás un filtro breve para revisar nivel y horario.'}else{const quien=persona==='nino'?'mi hijo/a':persona==='joven'?'un joven':persona==='mujer'?'mí':'mí';href='https://wa.me/5215521047277?text='+encodeURIComponent('Hola Pedro, busco una clase particular para '+quien+'. Quisiera revisar sede y horario disponibles.');txt='<strong>Clase particular</strong><br>'+c.label+'.<br>Te llevamos directo a WhatsApp para revisar sede y horario.'}$('resumen').innerHTML=txt;$('continuar').href=href;$('continuar').target=modo==='particular'?'_blank':'';$('continuar').rel='noopener';show('paso3')}
-document.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>elegirPersona(b.dataset.person));$('modalidades').addEventListener('click',e=>{const b=e.target.closest('[data-mode]');if(b)finalizar(b.dataset.mode)});$('volver1').onclick=()=>show('paso1');$('volver2').onclick=()=>persona&&rutaDirecta(persona)?show('paso1'):show('paso2');
+document.getElementById('people').addEventListener('click',e=>{const b=e.target.closest('[data-person]');if(!b)return;document.querySelectorAll('[data-person]').forEach(x=>x.classList.toggle('active',x===b));const d=data[b.dataset.person];title.textContent=d.title;text.textContent=d.text;actions.innerHTML=d.actions.map(a=>`<a class="go ${a[2]}" href="${a[1]}" ${a[1].startsWith('http')?'target="_blank" rel="noopener"':''}>${a[0]}</a>`).join('');rule.textContent=d.rule;result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'nearest'});});
 })();
 </script>
-</body></html>
+</body>
+</html>
