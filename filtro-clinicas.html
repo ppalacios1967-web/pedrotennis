@@ -16,25 +16,62 @@
 </head>
 <body>
 <div class="shell"><main class="card">
-<header class="head"><a class="logo" href="/">Pedro <span>Tennis</span></a><h1 id="mainTitle">Encuentra tu clínica en menos de 30 segundos.</h1><p>Solo tres decisiones. Sin formularios largos.</p></header>
+<header class="head"><a class="logo" href="/">Pedro <span>Tennis</span></a><h1 id="mainTitle">Encuentra tu clínica en menos de 30 segundos.</h1><p>Horarios y condiciones claras antes de escribir por WhatsApp.</p></header>
 <div class="progress"><span id="bar" style="width:33%"></span></div>
 <div class="body">
 <section class="step active" id="s1"><h2>¿Te queda bien Geógrafos?</h2><p class="note">Las clínicas se realizan únicamente ahí.</p><div class="choices"><button class="choice" data-geo="si">Sí, puedo asistir</button><button class="choice" data-geo="no">No me queda bien</button></div></section>
 <section class="step" id="s2"><button class="back" data-back="1">← Atrás</button><h2>¿Cuál es el nivel?</h2><div class="choices"><button class="choice" data-level="Primera vez">Primera vez</button><button class="choice" data-level="Principiante">Principiante</button><button class="choice" data-level="Intermedio">Intermedio</button><button class="choice" data-level="Avanzado">Avanzado</button></div></section>
-<section class="step" id="s3"><button class="back" data-back="2">← Atrás</button><h2>¿Qué horario te acomoda mejor?</h2><div class="choices"><button class="choice" data-time="Mañana">Mañana</button><button class="choice" data-time="Tarde">Tarde</button><button class="choice" data-time="Después de las 17:00">Después de las 17:00</button><button class="choice" data-time="Flexible">Tengo flexibilidad</button></div></section>
+<section class="step" id="s3"><button class="back" data-back="2">← Atrás</button><h2>¿Qué opción quieres revisar?</h2><p class="note" id="scheduleNote">Los grupos y clínicas se realizan únicamente en Geógrafos.</p><div class="choices" id="timeChoices"></div></section>
 <section class="step" id="s4"><h2>Listo.</h2><div class="result" id="summary"></div><a class="go" id="wa" target="_blank" rel="noopener">Enviar por WhatsApp</a><a class="go alt" href="/elige-tu-programa">Cambiar opción</a><p class="privacy">No escribes datos personales en este filtro. Tú decides si envías el mensaje por WhatsApp.</p></section>
-<section class="step" id="sNo"><h2>Te conviene una clase particular.</h2><p class="note">No pasa nada si Geógrafos no te funciona. Las clases particulares pueden coordinarse en Geógrafos, Calacoaya o Centro Cívico.</p><a class="go" id="waPrivate" target="_blank" rel="noopener">Preguntar por clase particular</a><a class="go alt" href="/elige-tu-programa">Volver</a></section>
+<section class="step" id="sNo"><h2>Te conviene revisar una clase particular.</h2><p class="note">La clase particular cuesta $490 MXN por 1 hora. Se coordina habitualmente en Geógrafos o Calacoaya. Centro Cívico sólo puede considerarse cuando exista autorización y disponibilidad. El costo de cancha, cuando corresponda, se confirma antes de reservar.</p><a class="go" id="waPrivate" target="_blank" rel="noopener">Preguntar por clase particular</a><a class="go alt" href="/elige-tu-programa">Volver</a></section>
 </div></main></div>
 <script>
 (function(){
 const params=new URLSearchParams(location.search),origin=params.get('origen')||'web';let level='',time='';
-const profile=origin==='ninos'?'clínica infantil':origin==='damas'?'clínica para mujeres':'clínica de tenis';
-if(origin==='ninos')document.getElementById('mainTitle').textContent='Encuentra una clínica para tu hijo/a en menos de 30 segundos.';
-if(origin==='damas')document.getElementById('mainTitle').textContent='Encuentra tu clínica en menos de 30 segundos.';
+const profiles={
+  ninos:'clínica infantil',
+  damas:'clínica para mujeres',
+  'damas-avanzadas':'clínica para damas avanzadas',
+  adultos:'grupo de adultos',
+  'grupo-lunes':'grupo en formación del lunes',
+  clinicas:'grupo o clínica de tenis',
+  web:'grupo o clínica de tenis'
+};
+const profile=profiles[origin]||'grupo o clínica de tenis';
+if(origin==='ninos')document.getElementById('mainTitle').textContent='Encuentra una opción grupal para tu hijo/a en menos de 30 segundos.';
+if(origin==='damas'||origin==='damas-avanzadas')document.getElementById('mainTitle').textContent='Encuentra tu clínica en menos de 30 segundos.';
+if(origin==='adultos')document.getElementById('mainTitle').textContent='Revisa el grupo de adultos en menos de 30 segundos.';
+if(origin==='grupo-lunes')document.getElementById('mainTitle').textContent='Revisa el grupo del lunes en menos de 30 segundos.';
 function show(id,p){document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');if(p)document.getElementById('bar').style.width=p+'%';window.scrollTo({top:0,behavior:'smooth'})}
-document.querySelectorAll('[data-geo]').forEach(b=>b.onclick=()=>{if(b.dataset.geo==='no'){document.getElementById('waPrivate').href='https://wa.me/5215521047277?text='+encodeURIComponent('Hola Pedro, estaba buscando una '+profile+' pero Geógrafos no me queda bien. Quisiera información de una clase particular en Geógrafos, Calacoaya o Centro Cívico.');show('sNo',100)}else show('s2',66)});
-document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{level=b.dataset.level;show('s3',90)});
-document.querySelectorAll('[data-time]').forEach(b=>b.onclick=()=>{time=b.dataset.time;const msg='Hola Pedro, busco '+profile+'.\nNivel: '+level+'.\nHorario que me acomoda: '+time+'.\nSí puedo asistir a Geógrafos.\nQuisiera saber qué opción tienes disponible.';document.getElementById('summary').innerHTML='<strong>'+profile.charAt(0).toUpperCase()+profile.slice(1)+'</strong><br>Nivel: '+level+'<br>Horario: '+time+'<br>Sede: Geógrafos';document.getElementById('wa').href='https://wa.me/5215521047277?text='+encodeURIComponent(msg);show('s4',100)});
+function scheduleOptions(){
+  const box=document.getElementById('timeChoices');
+  const sets={
+    'damas-avanzadas':[['Jueves 10:00 a 12:00','Clínica para damas avanzadas'],['Otro horario','Quiero conocer otras opciones']],
+    adultos:[['Martes y jueves 19:00 a 20:00','Grupo de adultos en formación'],['Otro horario','Quiero conocer otras opciones']],
+    'grupo-lunes':[['Lunes 17:00 a 18:00','Grupo en formación'],['Otro horario','Quiero conocer otras opciones']],
+    ninos:[['Lunes 17:00 a 18:00','Revisar compatibilidad con el grupo en formación'],['Otro horario','Quiero conocer otras opciones']],
+    damas:[['Jueves 10:00 a 12:00','Clínica avanzada; se revisa compatibilidad de nivel'],['Otro horario','Quiero conocer otras opciones']],
+    clinicas:[['Lunes 17:00 a 18:00','Grupo en formación'],['Martes y jueves 19:00 a 20:00','Grupo de adultos en formación'],['Jueves 10:00 a 12:00','Clínica para damas avanzadas'],['Otro horario','Quiero conocer otras opciones']],
+    web:[['Lunes 17:00 a 18:00','Grupo en formación'],['Martes y jueves 19:00 a 20:00','Grupo de adultos en formación'],['Jueves 10:00 a 12:00','Clínica para damas avanzadas'],['Otro horario','Quiero conocer otras opciones']]
+  };
+  box.innerHTML='';
+  (sets[origin]||sets.web).forEach(([value,small])=>{
+    const b=document.createElement('button');b.className='choice';b.dataset.time=value;b.innerHTML=value+'<small>'+small+'</small>';box.appendChild(b);
+  });
+  box.querySelectorAll('[data-time]').forEach(b=>b.onclick=()=>{
+    time=b.dataset.time;
+    const msg='Hola Pedro, me interesa '+profile+'.\nNivel: '+level+'.\nOpción/horario: '+time+'.\nSí puedo asistir a Canchas de Tenis Geógrafos.\nQuisiera confirmar compatibilidad, cupo y costo total antes de reservar.';
+    document.getElementById('summary').innerHTML='<strong>'+profile.charAt(0).toUpperCase()+profile.slice(1)+'</strong><br>Nivel: '+level+'<br>Opción/horario: '+time+'<br>Lugar: Canchas de Tenis Geógrafos<br><small>Pedro confirma personalmente compatibilidad, cupo y costo antes de reservar.</small>';
+    document.getElementById('wa').href='https://wa.me/5215521047277?text='+encodeURIComponent(msg);show('s4',100);
+  });
+}
+document.querySelectorAll('[data-geo]').forEach(b=>b.onclick=()=>{
+  if(b.dataset.geo==='no'){
+    document.getElementById('waPrivate').href='https://wa.me/5215521047277?text='+encodeURIComponent('Hola Pedro, estaba buscando '+profile+' pero Geógrafos no me queda bien. Quisiera información sobre una clase particular de 1 hora por $490. Me interesa revisar Geógrafos o Calacoaya; entiendo que Centro Cívico sólo es opción si existe autorización y disponibilidad. Quisiera confirmar cancha y costo total antes de reservar.');
+    show('sNo',100)
+  }else show('s2',66)
+});
+document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{level=b.dataset.level;scheduleOptions();show('s3',90)});
 document.querySelectorAll('[data-back]').forEach(b=>b.onclick=()=>show('s'+b.dataset.back,b.dataset.back==='1'?33:66));
 })();
 </script>
