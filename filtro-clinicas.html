@@ -47,12 +47,12 @@ function scheduleOptions(){
   const box=document.getElementById('timeChoices');
   const sets={
     'damas-avanzadas':[['Jueves 10:00 a 12:00','Clínica para damas avanzadas'],['Otro horario','Quiero conocer otras opciones']],
-    adultos:[['Martes y jueves 19:00 a 20:00','Grupo de adultos en formación'],['Otro horario','Quiero conocer otras opciones']],
+    adultos:[['Martes y jueves 7:00 a 8:00 am','Grupo de adultos en formación'],['Otro horario','Quiero conocer otras opciones']],
     'grupo-lunes':[['Lunes 17:00 a 18:00','Grupo en formación'],['Otro horario','Quiero conocer otras opciones']],
     ninos:[['Lunes 17:00 a 18:00','Revisar compatibilidad con el grupo en formación'],['Otro horario','Quiero conocer otras opciones']],
     damas:[['Jueves 10:00 a 12:00','Clínica avanzada; se revisa compatibilidad de nivel'],['Otro horario','Quiero conocer otras opciones']],
-    clinicas:[['Lunes 17:00 a 18:00','Grupo en formación'],['Martes y jueves 19:00 a 20:00','Grupo de adultos en formación'],['Jueves 10:00 a 12:00','Clínica para damas avanzadas'],['Otro horario','Quiero conocer otras opciones']],
-    web:[['Lunes 17:00 a 18:00','Grupo en formación'],['Martes y jueves 19:00 a 20:00','Grupo de adultos en formación'],['Jueves 10:00 a 12:00','Clínica para damas avanzadas'],['Otro horario','Quiero conocer otras opciones']]
+    clinicas:[['Lunes 17:00 a 18:00','Grupo en formación'],['Martes y jueves 7:00 a 8:00 am','Grupo de adultos en formación'],['Jueves 10:00 a 12:00','Clínica para damas avanzadas'],['Otro horario','Quiero conocer otras opciones']],
+    web:[['Lunes 17:00 a 18:00','Grupo en formación'],['Martes y jueves 7:00 a 8:00 am','Grupo de adultos en formación'],['Jueves 10:00 a 12:00','Clínica para damas avanzadas'],['Otro horario','Quiero conocer otras opciones']]
   };
   box.innerHTML='';
   (sets[origin]||sets.web).forEach(([value,small])=>{
