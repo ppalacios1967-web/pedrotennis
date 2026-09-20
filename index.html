@@ -38,6 +38,19 @@
 @media(max-width:920px){.start-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.start-here{padding-top:18px}.start-grid{grid-template-columns:1fr}.start-card{min-height:300px}}
 
+.program-summary{padding-top:38px!important;padding-bottom:38px!important}
+.program-summary .section-head{margin-bottom:14px}
+.program-summary .grid-3{gap:12px}
+.program-summary .card{display:grid;grid-template-columns:96px 1fr;align-items:center;min-height:0;overflow:hidden}
+.program-summary .card-media{width:96px;height:96px;aspect-ratio:1/1}
+.program-summary .card-media img{width:100%;height:100%;object-fit:cover}
+.program-summary .card-body{padding:14px 16px}
+.program-summary .card-body h3{margin:0 0 4px;font-size:1.05rem}
+.program-summary .card-body p{margin:0 0 6px;font-size:.9rem;line-height:1.35}
+.program-summary .text-link{font-size:.88rem}
+@media(max-width:900px){.program-summary .grid-3{grid-template-columns:1fr}.program-summary .card{grid-template-columns:82px 1fr}.program-summary .card-media{width:82px;height:82px}}
+@media(max-width:560px){.program-summary{padding-top:28px!important;padding-bottom:28px!important}.program-summary .section-head p{margin-bottom:0}}
+
 </style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Pedro Palacios", "jobTitle": "Profesor y entrenador de tenis", "url": "https://pedrotennis.com/", "areaServed": ["Ciudad Satélite", "Naucalpan", "Polanco", "Atizapán"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Pedro Tennis", "url": "https://pedrotennis.com/", "telephone": "+52 55 2104 7277", "founder": {"@type": "Person", "name": "Pedro Palacios"}, "areaServed": ["Ciudad Satélite", "Naucalpan", "Polanco", "Atizapán"]}</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFM4B67M7G"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WFM4B67M7G');</script>
@@ -101,7 +114,7 @@
 </div>
 </div>
 </section>
-<section class="start-here" aria-labelledby="elige-opcion">
+<section class="start-here" id="selector" aria-labelledby="elige-opcion">
 <div class="wrap">
 <div class="section-head">
 <div class="kicker">Empieza por lo que buscas</div>
@@ -120,8 +133,8 @@
 <article class="start-card">
 <img src="./assets/jovenes.webp" alt="Jóvenes entrenando tenis en Pedro Tennis" loading="lazy" decoding="async"/>
 <div class="start-card-content">
-<h3>Quiero que mi hijo/a avance</h3>
-<p>Técnica, estrategia, movilidad y preparación para jugar o competir mejor.</p>
+<h3>Busco entrenamiento para un joven</h3>
+<p>Técnica, estrategia, confianza y preparación para jugar o competir mejor.</p>
 <a href="/clases-de-tenis-para-jovenes">Ver programa para jóvenes →</a>
 </div>
 </article>
@@ -292,7 +305,7 @@
 
 </div>
 </section>
-<section class="program-compact" id="programas">
+<section class="program-compact program-summary" id="programas">
 <div class="wrap">
 <div class="section-head">
 <div class="kicker">Programas</div>
@@ -468,7 +481,7 @@
 </main>
 <div class="mobile-cta">
 <a class="btn btn-primary" href="https://wa.me/5215521047277?text=Hola%20Pedro%2C%20quiero%20solicitar%20una%20clase%20de%20prueba.%20Edad%3A%20__.%20Nivel%3A%20__.%20Zona%20o%20colonia%3A%20__.%20Horario%20preferido%3A%20__." rel="noopener" target="_blank">WhatsApp</a>
-<a class="btn btn-lime" href="#programas">Programas</a>
+<a class="btn btn-lime" href="#selector">Elegir opción</a>
 </div>
 <footer class="footer"><div class="wrap footgrid">
 <div><a class="logo" href="/">Pedro <span>Tennis</span></a><p style="color:var(--muted);max-width:420px">Clases y entrenamiento de tenis para niños, jóvenes y adultos con atención personalizada.</p></div>
