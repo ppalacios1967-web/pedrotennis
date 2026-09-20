@@ -21,6 +21,36 @@
 .promo-clinic strong{font-weight:950}
 .promo-clinic a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:#071b33;color:#fff;padding:8px 14px;border-radius:999px;font-size:.88rem}
 @media(max-width:560px){.promo-clinic .wrap{gap:7px;padding:9px 0;font-size:.86rem}.promo-clinic a{width:100%;max-width:220px}}
+
+.start-here{padding:26px 0 8px;background:#f7fafc}
+.start-here .section-head{max-width:760px;margin-bottom:18px}
+.start-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.start-card{position:relative;overflow:hidden;border-radius:18px;min-height:340px;background:#071a2f;box-shadow:0 14px 34px rgba(7,26,47,.12)}
+.start-card img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;opacity:.82}
+.start-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,47,.05) 25%,rgba(7,26,47,.9) 100%)}
+.start-card-content{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:22px;color:#fff}
+.start-card h3{margin:0 0 7px;font-size:1.35rem;color:#fff}
+.start-card p{margin:0 0 14px;color:#e7eef4;line-height:1.45}
+.start-card a{display:inline-flex;text-decoration:none;background:#dfff45;color:#071a2f;padding:10px 14px;border-radius:999px;font-weight:900}
+.start-card a:focus,.start-card a:hover{transform:translateY(-1px)}
+.start-card.clinic-card img{filter:saturate(.95)}
+.start-note{text-align:center;color:#627383;font-size:.92rem;margin-top:14px}
+@media(max-width:920px){.start-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.start-here{padding-top:18px}.start-grid{grid-template-columns:1fr}.start-card{min-height:300px}}
+
+.program-summary{padding-top:38px!important;padding-bottom:38px!important}
+.program-summary .section-head{margin-bottom:14px}
+.program-summary .grid-3{gap:12px}
+.program-summary .card{display:grid;grid-template-columns:96px 1fr;align-items:center;min-height:0;overflow:hidden}
+.program-summary .card-media{width:96px;height:96px;aspect-ratio:1/1}
+.program-summary .card-media img{width:100%;height:100%;object-fit:cover}
+.program-summary .card-body{padding:14px 16px}
+.program-summary .card-body h3{margin:0 0 4px;font-size:1.05rem}
+.program-summary .card-body p{margin:0 0 6px;font-size:.9rem;line-height:1.35}
+.program-summary .text-link{font-size:.88rem}
+@media(max-width:900px){.program-summary .grid-3{grid-template-columns:1fr}.program-summary .card{grid-template-columns:82px 1fr}.program-summary .card-media{width:82px;height:82px}}
+@media(max-width:560px){.program-summary{padding-top:28px!important;padding-bottom:28px!important}.program-summary .section-head p{margin-bottom:0}}
+
 </style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Pedro Palacios", "jobTitle": "Profesor y entrenador de tenis", "url": "https://pedrotennis.com/", "areaServed": ["Ciudad Satélite", "Naucalpan", "Polanco", "Atizapán"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Pedro Tennis", "url": "https://pedrotennis.com/", "telephone": "+52 55 2104 7277", "founder": {"@type": "Person", "name": "Pedro Palacios"}, "areaServed": ["Ciudad Satélite", "Naucalpan", "Polanco", "Atizapán"]}</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WFM4B67M7G"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WFM4B67M7G');</script>
@@ -61,7 +91,7 @@
 <p class="lead">Aprende técnica, gana confianza y disfruta realmente la cancha con una enseñanza adaptada a tu edad, nivel y objetivos.</p>
 <div class="actions">
 <a class="btn btn-primary" href="https://wa.me/5215521047277?text=Hola%20Pedro%2C%20quiero%20solicitar%20una%20clase%20de%20prueba.%20Edad%3A%20__.%20Nivel%3A%20__.%20Zona%20o%20colonia%3A%20__.%20Horario%20preferido%3A%20__." rel="noopener" target="_blank">Solicita tu clase de prueba</a>
-<a class="btn btn-lime" href="#programas">Ver programas</a>
+<a class="btn btn-lime" href="#selector">Elige tu opción</a>
 </div>
 <p class="micro">Prueba sin costo en clínicas. En clase particular no se cobran honorarios; únicamente se cubren $190 MXN de cancha mediante transferencia para confirmar la reservación.</p>
 <div class="parent-proof">
@@ -82,6 +112,50 @@
 <span>Técnica, coordinación y confianza según edad y nivel.</span>
 </div>
 </div>
+</div>
+</section>
+<section class="start-here" id="selector" aria-labelledby="elige-opcion">
+<div class="wrap">
+<div class="section-head">
+<div class="kicker">Empieza por lo que buscas</div>
+<h2 id="elige-opcion">Encuentra la opción adecuada para ti o para tu familia.</h2>
+<p>Cada etapa necesita algo distinto. Elige tu objetivo y conoce el programa, beneficios, modalidad y siguiente paso antes de escribir por WhatsApp.</p>
+</div>
+<div class="start-grid">
+<article class="start-card">
+<img src="./assets/ninos.webp" alt="Niños aprendiendo tenis en Pedro Tennis" loading="lazy" decoding="async"/>
+<div class="start-card-content">
+<h3>Quiero tenis para mi hijo/a</h3>
+<p>Coordinación, confianza, disciplina y menos tiempo frente a pantallas.</p>
+<a href="/clases-de-tenis-para-ninos">Ver programa infantil →</a>
+</div>
+</article>
+<article class="start-card">
+<img src="./assets/jovenes.webp" alt="Jóvenes entrenando tenis en Pedro Tennis" loading="lazy" decoding="async"/>
+<div class="start-card-content">
+<h3>Busco entrenamiento para un joven</h3>
+<p>Técnica, estrategia, confianza y preparación para jugar o competir mejor.</p>
+<a href="/clases-de-tenis-para-jovenes">Ver programa para jóvenes →</a>
+</div>
+</article>
+<article class="start-card">
+<img src="./assets/adultos.webp" alt="Adultos entrenando tenis en Pedro Tennis" loading="lazy" decoding="async"/>
+<div class="start-card-content">
+<h3>Quiero tenis para mí</h3>
+<p>Aprender, retomar, mejorar condición física y disfrutar una actividad que te desconecta de la rutina.</p>
+<a href="/clases-de-tenis-para-adultos">Ver opciones para adultos →</a>
+</div>
+</article>
+<article class="start-card clinic-card">
+<img src="./assets/clinicas1.webp" alt="Clínica grupal de tenis en Pedro Tennis" loading="lazy" decoding="async"/>
+<div class="start-card-content">
+<h3>Busco una clínica o grupo</h3>
+<p>Entrenamiento compartido por nivel, objetivo y horario. Clínicas en Canchas de Tenis Geógrafos.</p>
+<a href="/clinicas-de-tenis">Ver clínicas y grupos →</a>
+</div>
+</article>
+</div>
+<p class="start-note">¿Prefieres atención individual? La clase particular de 1 hora sigue disponible en Geógrafos o Calacoaya.</p>
 </div>
 </section>
 <section>
@@ -231,7 +305,7 @@
 
 </div>
 </section>
-<section class="program-compact" id="programas">
+<section class="program-compact program-summary" id="programas">
 <div class="wrap">
 <div class="section-head">
 <div class="kicker">Programas</div>
@@ -407,7 +481,7 @@
 </main>
 <div class="mobile-cta">
 <a class="btn btn-primary" href="https://wa.me/5215521047277?text=Hola%20Pedro%2C%20quiero%20solicitar%20una%20clase%20de%20prueba.%20Edad%3A%20__.%20Nivel%3A%20__.%20Zona%20o%20colonia%3A%20__.%20Horario%20preferido%3A%20__." rel="noopener" target="_blank">WhatsApp</a>
-<a class="btn btn-lime" href="#programas">Programas</a>
+<a class="btn btn-lime" href="#selector">Elegir opción</a>
 </div>
 <footer class="footer"><div class="wrap footgrid">
 <div><a class="logo" href="/">Pedro <span>Tennis</span></a><p style="color:var(--muted);max-width:420px">Clases y entrenamiento de tenis para niños, jóvenes y adultos con atención personalizada.</p></div>
